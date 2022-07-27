@@ -3,6 +3,7 @@ package Hibernate.entity;
 import lombok.*;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Entity
 
@@ -12,6 +13,7 @@ import javax.persistence.Entity;
 @ToString
 @Builder
 public class Animal {
+    @Id
 private  int id;
 private String name;
 private int age;

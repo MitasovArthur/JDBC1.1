@@ -5,7 +5,7 @@
     <session-factory>
 
         <property name="dialect">org.hibernate.dialect.SQLServerDialect</property>
-        <property name="connection.url">jdbc:mysql://127.0.0.1:3306/?user=root/Animals</property>
+        <property name="connection.url">jdbc:mysql://127.0.0.1:3306/Animals</property>
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
 
         <property name="connection.username">root</property>
@@ -13,5 +13,7 @@
 
         <property name="hbm2ddl.auto">none</property>
         <property name="show_sql">true</property>
+
+        <mapping class="Hibernate.entity.Animal"/>
     </session-factory>
 </hibernate-configuration>

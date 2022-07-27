@@ -32,12 +32,25 @@ public class AnimalDaoImpl implements AnimalDao {
 
     @Override
     public Animal update(Animal animal) {
-        return null;
+        Session session = getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+        animal.setAge(animal.getAge()+1);
+        animal.setId(1);
+        session.update(animal);
+        transaction.commit();
+        session.close();
+       return animal;
     }
 
     @Override
     public boolean delete(Animal animal) {
-        return false;
+        Session session = getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+        animal.setId(1);
+        session.delete(animal);
+        transaction.commit();
+        session.close();
+        return true;
     }
 
     @Override

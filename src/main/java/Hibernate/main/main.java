@@ -14,5 +14,9 @@ public class main {
                 .tail(false)
                 .build();
         animalDao.add(animal);
+        System.out.println(animalDao.get(1));
+        animalDao.update(animal);
+        System.out.println(animalDao.get(1));
+        animalDao.delete(animal);
     }
 }
